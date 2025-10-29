@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네스프레소 커뮤니티 - 게시판</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/board.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo"><a href="index.html" style="color: #fff; text-decoration: none;">NESPRESSO</a></div>
+        <nav>
+            <a href="index.html#about">ABOUT</a>
+            <a href="index.html#machines">MACHINES</a>
+            <a href="index.html#coffee">COFFEE</a>
+            <a href="board.html">COMMUNITY</a>
+            <a href="index.html#contact">CONTACT</a>
+            <div class="social-icons">
+                <a href="#">𝕏</a>
+                <a href="#">in</a>
+                <a href="#">f</a>
+                <a href="#">📷</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Board Section -->
+    <section class="board-container">
+        <div class="board-header">
+            <h1>네스프레소 커뮤니티</h1>
+            <p>커피 애호가들과 함께 이야기를 나눠보세요</p>
+        </div>
+
+        <!-- Write Button -->
+        <div class="board-actions">
+            <button id="writeBtn" class="btn-write">✏️ 글쓰기</button>
+        </div>
+
+        <!-- Post List -->
+        <div class="post-list" id="postList">
+            <div class="loading">게시글을 불러오는 중...</div>
+        </div>
+    </section>
+
+    <!-- Write Modal -->
+    <div id="writeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>새 글 작성</h2>
+            <form id="postForm">
+                <div class="form-group">
+                    <label for="author">작성자</label>
+                    <input type="text" id="author" required placeholder="이름을 입력하세요">
+                </div>
+                <div class="form-group">
+                    <label for="title">제목</label>
+                    <input type="text" id="title" required placeholder="제목을 입력하세요">
+                </div>
+                <div class="form-group">
+                    <label for="content">내용</label>
+                    <textarea id="content" required placeholder="내용을 입력하세요"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">작성 완료</button>
+                    <button type="button" class="btn-cancel" id="cancelBtn">취소</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- View Modal -->
+    <div id="viewModal" class="modal">
+        <div class="modal-content">
+            <span class="close-view">&times;</span>
+            <div id="postDetail">
+                <div class="post-detail-header">
+                    <h2 id="detailTitle"></h2>
+                    <button id="deleteBtn" class="btn-delete">삭제</button>
+                </div>
+                <div class="post-meta">
+                    <span id="detailAuthor"></span>
+                    <span id="detailDate"></span>
+                </div>
+                <div class="post-content" id="detailContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>네스프레소</h3>
+                <ul>
+                    <li><a href="#">회사 소개</a></li>
+                    <li><a href="#">채용</a></li>
+                    <li><a href="#">보도자료</a></li>
+                    <li><a href="#">지속가능성</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>제품</h3>
+                <ul>
+                    <li><a href="#">커피 머신</a></li>
+                    <li><a href="#">커피 캡슐</a></li>
+                    <li><a href="#">액세서리</a></li>
+                    <li><a href="#">프로페셔널</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>고객 서비스</h3>
+                <ul>
+                    <li><a href="#">080-734-1111</a></li>
+                    <li><a href="#">네스프레소 클럽</a></li>
+                    <li><a href="#">부티크 찾기</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>네스프레소 클럽</h3>
+                <ul>
+                    <li><a href="#">회원 가입</a></li>
+                    <li><a href="#">회원 혜택</a></li>
+                    <li><a href="#">주문 조회</a></li>
+                    <li><a href="#">재활용 프로그램</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 네스프레소 코리아. All rights reserved. | 개인정보처리방침 | 이용약관</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/board.js"></script>
+</body>
+</html>
